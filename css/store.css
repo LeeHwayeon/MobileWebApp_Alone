@@ -1,0 +1,210 @@
+@import url(proto.css);
+
+
+
+/* ******************* 공통영역 선언시작 **************** */
+
+/* ********  store & diy 공통 영역 ******** */
+#store #contents,
+#diy #contents {
+  width: 100%;
+  padding: 31px 23px;
+}
+
+#store #contents .product-list {
+  height: 593px;
+}
+
+/* category */
+#contents .category>a .img-box {
+  border-radius: 10px;
+}
+
+#contents .category>a {
+  height: 97px;
+  padding: 0 2%;
+  margin-bottom: 20px;
+}
+
+#contents .category>a .img-box {
+  background-color: #ecebeb;
+  position: relative;
+  margin: 0 auto;
+}
+
+#contents .category>a .img-box:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+#contents .category>a>div>img {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#contents .category>a p {
+  color: #464646;
+  font: bold 1.3rem/18px '맑은 고딕', sans-serif;
+  text-align: center;
+  margin-top: 11px;
+}
+
+
+
+/* product-list */
+#contents .product-list {
+  width: 100%;
+  padding-top: 29px;
+  margin-bottom: 100px;
+  border-top: 1px solid #e2e2e2;
+}
+
+#contents .product-list h2 {
+  color: #464646;
+  font: bold 1.8rem/24px '맑은 고딕', sans-serif;
+  margin-bottom: 22px;
+}
+
+#contents .product-list ul {
+  width: 100%;
+  height: auto;
+}
+
+#contents .product-list ul li {
+  width: 46%;
+  height: 253px;
+  float: left;
+  margin: 0 23px 23px 0;
+  color: #2d2d2d;
+}
+
+#contents .product-list ul li:nth-child(2n) {
+  margin-right: 0;
+}
+
+#contents .product-list ul li .img-box {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+#contents .product-list ul li .img-box img {
+  width: 100%;
+  height: 100%;
+}
+
+#contents .product-list ul li .img-box .bookmark {
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
+  color: #9f5ba6;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#contents .product-list ul li .product-title {
+  width: 100%;
+  height: 42px;
+  margin: 12px 0 3px;
+  font: 400 1.5rem/20px '맑은 고딕', sans-serif;
+
+}
+
+#contents .product-list ul li .price {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 4px;
+  font: bold 1.4rem/18px '맑은 고딕', sans-serif;
+}
+
+#contents .product-list ul li .price span {
+  font: bold 1.5rem/20px '맑은 고딕', sans-serif;
+  color: #9f5ba6;
+  margin-right: 8px;
+}
+
+#contents .product-list ul li .rating {
+  width: 100%;
+  height: 12px;
+  font: bold 0.9rem/12px '맑은 고딕', sans-serif;
+
+}
+
+#contents .product-list ul li .rating i {
+  font-size: 1rem;
+  margin-right: 4px;
+  color: #9f5ba6;
+}
+
+#contents .product-list ul li .rating span {
+  color: #7b7979;
+  margin-left: 7px;
+}
+
+/* *********** btn *********** */
+.btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font: bold 1.5rem/39px '맑은 고딕', sans-serif;
+  color: #fff;
+  background-color: #9f5ba6;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background-color: #952fa0;
+}
+
+
+
+/* *********** Store Area Start *********** */
+
+/* category */
+#store #contents .category{
+  /* padding: 29px 23px; */
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 9px;
+  
+}
+
+#store #contents .category>a{
+  display: block;
+  width: 25%;
+}
+#store #contents .category>a:nth-child(8){
+  text-align: center;
+  line-height: 97px;
+  font-size: 2.5rem;
+  color: #7b7979;
+}
+
+#store #contents .product-list{
+  height: 593px;
+}
+#store #contents .category>a .img-box{
+  width: 68px; height: 68px;
+}
+
+#store #contents .category>a>div>img{
+  width: 56px;
+  height: 56px;
+}
+
+
+
+
+
+.act{
+  display: none !important;
+}

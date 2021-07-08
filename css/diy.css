@@ -1,0 +1,276 @@
+@import url(proto.css);
+
+/* ******************* 공통영역 선언시작 **************** */
+
+/* ********  store & diy 공통 영역 ******** */
+#store #contents,
+#diy #contents {
+  width: 100%;
+  padding: 31px 23px;
+}
+
+#store #contents .product-list {
+  height: 593px;
+}
+
+/* category */
+#contents .category>a .img-box {
+  border-radius: 10px;
+}
+
+#contents .category>a {
+  height: 97px;
+  padding: 0 2%;
+  margin-bottom: 20px;
+}
+
+#contents .category>a .img-box {
+  background-color: #ecebeb;
+  position: relative;
+  margin: 0 auto;
+}
+
+#contents .category>a .img-box:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+#contents .category>a>div>img {
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#contents .category>a p {
+  color: #464646;
+  font: bold 1.3rem/18px '맑은 고딕', sans-serif;
+  text-align: center;
+  margin-top: 11px;
+}
+
+
+
+/* product-list */
+#contents .product-list {
+  width: 100%;
+  padding-top: 29px;
+  margin-bottom: 100px;
+  border-top: 1px solid #e2e2e2;
+}
+
+#contents .product-list h2 {
+  color: #464646;
+  font: bold 1.8rem/24px '맑은 고딕', sans-serif;
+  margin-bottom: 22px;
+}
+
+#contents .product-list ul {
+  width: 100%;
+  height: auto;
+}
+
+#contents .product-list ul li {
+  width: 46%;
+  height: 253px;
+  float: left;
+  margin: 0 23px 23px 0;
+  color: #2d2d2d;
+}
+
+#contents .product-list ul li:nth-child(2n) {
+  margin-right: 0;
+}
+
+#contents .product-list ul li .img-box {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+#contents .product-list ul li .img-box img {
+  width: 100%;
+  height: 100%;
+}
+
+#contents .product-list ul li .img-box .bookmark {
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
+  color: #9f5ba6;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#contents .product-list ul li .product-title {
+  width: 100%;
+  height: 42px;
+  margin: 12px 0 3px;
+  font: 400 1.5rem/20px '맑은 고딕', sans-serif;
+
+}
+
+#contents .product-list ul li .price {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 4px;
+  font: bold 1.4rem/18px '맑은 고딕', sans-serif;
+}
+
+#contents .product-list ul li .price span {
+  font: bold 1.5rem/20px '맑은 고딕', sans-serif;
+  color: #9f5ba6;
+  margin-right: 8px;
+}
+
+#contents .product-list ul li .rating {
+  width: 100%;
+  height: 12px;
+  font: bold 0.9rem/12px '맑은 고딕', sans-serif;
+
+}
+
+#contents .product-list ul li .rating i {
+  font-size: 1rem;
+  margin-right: 4px;
+  color: #9f5ba6;
+}
+
+#contents .product-list ul li .rating span {
+  color: #7b7979;
+  margin-left: 7px;
+}
+
+
+/* *********** btn *********** */
+.btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font: bold 1.5rem/39px '맑은 고딕', sans-serif;
+  color: #fff;
+  background-color: #9f5ba6;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background-color: #952fa0;
+}
+
+
+
+/* *********** DIY product Area Start *********** */
+#diy #contents .product-list{
+  height: 857px;
+}
+#diy #contents .category>a .img-box{
+  border-radius: 50%;
+}
+
+/* title */
+#diy #header .menubar-top .title {
+  width: 81%;
+  height: 34px;
+  float: right;
+  color: #7b7979;
+}
+#diy #header .menubar-top .title h1{
+  width: 69%;
+  padding-right: 0;
+}
+#diy #header .menubar-top .title {
+  width: 81%;
+  height: 34px;
+  float: right;
+  color: #7b7979;
+}
+#diy #header .menubar-top .title .category-title {
+  width: 80%;
+  height: 100%;
+  font: bold 2rem/34px '맑은 고딕', sans-serif;
+  color: #2d2d2d;
+  text-align: center;
+  float: left;
+  margin-right: 19px;
+}
+#diy #header .menubar-top .title i {
+  float: left;
+  font-size: 2.7rem;
+  height: 100%;
+  line-height: 34px;
+  position: absolute; right: 0; right: 33px;
+}
+
+/* category */
+#diy #contents .category>a{
+  display: inline-block;
+  margin-right: 24px;
+  padding: 0;
+}
+
+#diy #contents .category>a .img-box{
+  width: 64px; height: 64px;
+}
+#diy #contents .category>a>div>img{
+  width: 45px; height: 45px;
+}
+
+/* diy-level */
+#diy #contents .swiper-container:nth-child(2){
+  border-top: 1px solid #e2e2e2;
+}
+#diy #contents .diy-level{
+  margin-bottom: 29px;
+}
+#diy #contents h2{
+  margin: 22px auto;
+  font: bold 1.8rem/24px '맑은고딕', sans-serif;
+  color: #464646;
+}
+#diy #contents .diy-level::after{
+  content: ''; display: block; clear: both;
+}
+
+#diy #contents .diy-level a{
+  display: block; float: left; margin-right: 20px;
+}
+#diy #contents .diy-level a:last-child{
+  margin-right: 0;
+}
+#diy #contents .diy-level a .icon{
+  font-size: 1.2rem; color: #9f5ba6;
+  margin: 0 0 6px; padding: 0;
+}
+#diy #contents .diy-level a:last-child .icon{
+  width: 73px;
+}
+
+.swiper-container{
+  width: 100%;
+}
+
+/* diy-product */
+#contents .product-list ul li .img-box img{
+  width: 160px; height: 160px;
+}
+#diy #contents .product-list p{
+  margin: 0 0 22px;
+  font: 400 1.2rem/13px '맑은고딕', sans-serif;
+}
+#diy #contents .product-list p span{
+  margin-left: 130px;
+}
+#diy #contents .product-list p span i:first-child{
+  margin-right: 28px;
+}
+
+/* product-list */
+#diy #contents .product-list ul li .img-box a{
+  right: 30px; bottom: 30px;
+}
+

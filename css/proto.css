@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+/* ******************* 레이아웃 구성시작 **************** */
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+#contents {
+  width: 100%;
+}
+
+/* ******************* 공통영역 선언시작 **************** */
+/* *********** menubar-top *********** */
+#header {
+   width: 100%;
+   margin-bottom: 5px;
+}
+
+#header .menubar-top {
+  width: 100%;
+  height: auto;
+  padding: 40px 23px 0;
+  text-align: center;
+}
+
+#header .menubar-top::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* logo */
+#header .menubar-top .logo {
+  display: block;
+  width: 13%;
+  height: 34px;
+  margin-right: 19px;
+  float: left;
+  cursor: pointer;
+}
+
+/* search */
+#header .menubar-top .search {
+  width: 81%;
+  height: 34px;
+  float: right;
+  color: #7b7979;
+}
+
+#header .menubar-top .search .search-bar {
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(173, 173, 173, 0.27);
+  font: 400 1.5rem/34px 'Nanum Gothic', sans-serif;
+  text-indent: 10px;
+  text-align: left;
+  float: left;
+  margin-right: 19px;
+}
+
+#header .menubar-top .search i {
+  width: 12%;
+  float: left;
+  font-size: 2.7rem;
+  height: 100%;
+  line-height: 34px;
+}
+
+/* back button */
+#header .menubar-top .back {
+  display: block;
+  width: 5%;
+  height: 34px;
+  margin-right: 19px;
+  float: left;
+  cursor: pointer;
+  color: #7b7979;
+}
+
+#header .menubar-top .back i {
+  font-size: 3.4rem;
+  line-height: 34px;
+}
+
+/* *********** tab-menu *********** */
+.tab-menu {
+  width: 100%;
+  height: 35px;
+  margin: 15px 0 0;
+}
+
+.tab-menu ul li {
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+
+.tab-menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font: bold 1.5rem/34px 'Nanum Gothic', sans-serif;
+  color: #7b7979;
+  position: relative;
+}
+
+.tab-menu ul li a:hover {
+  color: #9660a2;
+}
+
+.tab-menu ul li a:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  color: #9660a2;
+  background-color: #9660a2;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
+/* 탭 활성화 클래스 */
+.on {
+  color: #9660a2 !important;
+  position: relative;
+}
+.sub-on::after { background-color: transparent; }
+
+.on::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  color: #9660a2;
+  background-color: #9660a2;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
+/* 수정2 하단 탭 활성화 */
+.on2 {
+  color: #9660a2 !important;
+}
+
+
+/* *********** footer *********** */
+#footer {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index:10; /* 최대강도 : 10 */
+  border-top: 1px solid #e2e2e2;
+  background-color: #fff;
+}
+
+#footer a {
+  display: block;
+  width: 25%;
+  height: 84px;
+  float: left;
+  text-align: center;
+  padding-top: 15px;
+  color: #7b7979;
+  font: bold 1.4rem/14px 'Nanum Gothic', sans-serif;
+}
+
+#footer a:hover {
+  color: #9660a2;
+}
+
+#footer a span {
+  display: block;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+
+
+/* ******************* 개별영역 선언시작 **************** */
+
+/* *********** Intro Area Start *********** */
+/* App logo */
+#intro .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
