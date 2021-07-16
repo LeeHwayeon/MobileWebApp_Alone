@@ -10,6 +10,7 @@
       <!-- category -->
       <div class="category">
         <div class="category-item" v-for="category in storeCategory" v-bind:key="category.store_category_id">
+          <!-- diy에만 링크를 거는 방법? -->
           <router-link to="/diy">
             <div class="img-box">
               <img v-bind:src="category.store_category_img">
@@ -79,7 +80,7 @@
         db.collection("store_category").orderBy('store_category_id').get().then((snapshot) => {
           const storeCategory = []
           snapshot.forEach((doc) => {
-            console.log(doc.data());
+            // console.log(doc.data());
 
             storeCategory.push(doc.data());
           });
@@ -90,7 +91,7 @@
         db.collection("store_product").orderBy("store_product_id").get().then((querySnapshot) => {
           const storeProducts = []
           querySnapshot.forEach((doc) => {
-            console.log(doc.data());
+            // console.log(doc.data());
             storeProducts.push(doc.data());
           });
           this.storeProducts = storeProducts;

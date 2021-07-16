@@ -58,7 +58,10 @@
 
       <!-- diy level -->
       <div class="swiper-container">
+        <!-- diy-level-title -->
         <h2>조립 난이도별 추천!</h2>
+
+        <!-- diy-level-content -->
         <div class="diy-level swiper-wrapper">
           <a href="#" class="swiper-slide">
             <div class="icon">
@@ -110,6 +113,7 @@
             인기순 <i class="fa fa-angle-down" aria-hidden="true"></i> <i class="fa fa-filter" aria-hidden="true"></i> 필터
           </span>
         </p>
+        <!-- diy product list -->
         <ul>
           <li v-for="product in diyProducts" v-bind:key="product.diy_product_id">
             <router-link to="/product">
@@ -200,7 +204,7 @@
           const diyCategory = [];
 
           querySnapshot.forEach(doc => {
-            console.log(doc.data());
+            // console.log(doc.data());
 
             diyCategory.push(doc.data());
           });
