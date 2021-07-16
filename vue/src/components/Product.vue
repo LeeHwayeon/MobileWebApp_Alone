@@ -230,7 +230,6 @@
     line-height: 34px;
   }
 
-
   /* *********** Contents Area Start *********** */
   #product #contents {
     padding: 25px 23px;
