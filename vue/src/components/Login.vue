@@ -17,7 +17,7 @@
         <input type="password" name="pw" id="input_pw" placeholder="비밀번호" v-model="password">
       </div>
       <p>
-        <button id="login_btn" class="btn" v-on:click="login">로그인</button>
+        <button to="/trend" id="login_btn" class="btn" v-on:click="login">로그인</button>
       </p>
     </form>
 
@@ -55,14 +55,16 @@
         firebase.auth().signInWithEmailAndPassword(this.id, this.password)
           .then(user => {
             console.log(user);
+            alert('환영합니다 ☺️');
 
-          this.$router.go({
-            path: this.$router.path
-          })
-            
+            this.$router.push('/trend');
+
           }, err => {
             console.log(err.message);
-            
+            alert("나홀로집에 회원이 아닙니다. 회원가입부터 진행해주세요!");
+
+            this.$router.push('/signup');
+
           });
         e.preventDefault();
       }
