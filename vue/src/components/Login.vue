@@ -2,7 +2,7 @@
   <div id="login">
     <!-- top-box Area Start -->
     <div class="top-box">
-      <a href="intro.html"><i class='fa fa-angle-left' aria-hidden='true'></i></a>
+      <router-link to="/intro"><i class='fa fa-angle-left' aria-hidden='true'></i></router-link>
       <h2>로그인</h2>
     </div>
 
@@ -24,7 +24,7 @@
     <!-- bottom-box Area Start -->
     <div class="bottom-box">
       <a href="#">아이디 / 비밀번호 찾기</a>
-      <a href="signup">회원가입하기</a>
+      <router-link to="/signup">회원가입하기</router-link>
 
       <!-- fast-login -->
       <div class="fast-login">
@@ -52,15 +52,17 @@
     },
     methods: {
       login(e) {
-        firebase.auth().signInWithEmailAndPassword(email, password)
-          .then(userCredential => {
-            console.log(userCredential);
-            
-            var user = userCredential.user;
+        firebase.auth().signInWithEmailAndPassword(this.id, this.password)
+          .then(user => {
+            console.log(user);
+
+          this.$router.go({
+            path: this.$router.path
           })
-          .catch(error => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
+            
+          }, err => {
+            console.log(err.message);
+            
           });
         e.preventDefault();
       }

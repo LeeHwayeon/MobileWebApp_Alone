@@ -45,7 +45,7 @@
       <div class="swiper-container">
         <!-- diy category -->
         <div class="category swiper-wrapper">
-          <div class="category-item swiper-slide" v-for="category in diyCategory" v-bind:key="category.diy_category_id">
+          <div class="category-item" v-for="category in diyCategory" v-bind:key="category.diy_category_id">
             <a href="#" class="swiper-slide">
               <div class="img-box">
                 <img v-bind:src="category.diy_category_img">
@@ -53,36 +53,6 @@
               <p>{{ category.diy_category_name }}</p>
             </a>
           </div>
-          <!-- <a href="#" class="swiper-slide">
-            <div class="img-box">
-              <img src="../assets/diy/diy-menu-icon2.png" alt="DIY 메뉴 카테고리2">
-            </div>
-            <p>침실가구</p>
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="img-box">
-              <img src="../assets/diy/diy-menu-icon3.png" alt="DIY 메뉴 카테고리3">
-            </div>
-            <p>수납/정리</p>
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="img-box">
-              <img src="../assets/diy/diy-menu-icon4.png" alt="DIY 메뉴 카테고리4">
-            </div>
-            <p>식탁/테이블</p>
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="img-box">
-              <img src="../assets/diy/diy-menu-icon5.png" alt="DIY 메뉴 카테고리5">
-            </div>
-            <p>홈데코조명</p>
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="img-box">
-              <img src="../assets/diy/diy-menu-icon6.png" alt="DIY 메뉴 카테고리6">
-            </div>
-            <p>반려동물</p>
-          </a> -->
         </div>
       </div>
 
@@ -141,101 +111,22 @@
           </span>
         </p>
         <ul>
-          <li>
+          <li v-for="product in diyProducts" v-bind:key="product.diy_product_id">
             <router-link to="/product">
               <div class="img-box">
-                <img src="../assets/diy/diy-item-img1.png" alt="스토어 아이템 이미지1">
+                <img v-bind:src="product.diy_product_img">
                 <div class="bookmark">
                   <i class='fa fa-bookmark' aria-hidden='true'></i>
                 </div>
               </div>
-              <h3 class="product-title">거실 우드 수납장</h3>
-              <div class="price"><span>22%</span>67,900원</div>
+              <h3 class="product-title">{{ product.diy_product_name }}</h3>
+              <div class="price"><span>{{ product.diy_product_price_discount }}</span>{{ product.diy_product_price }}
+              </div>
               <div class="rating">
-                <i class='fa fa-star' aria-hidden='true'></i>4.6
-                <span>리뷰 165개</span>
+                <i class='fa fa-star' aria-hidden='true'></i>{{ product.diy_product_rating_star }}
+                <span>{{ product.diy_product_rating_review }}</span>
               </div>
             </router-link>
-          </li>
-          <li>
-            <a href="#">
-              <div class="img-box">
-                <img src="../assets/diy/diy-item-img2.png" alt="스토어 아이템 이미지2">
-                <div class="bookmark">
-                  <i class='fa fa-bookmark' aria-hidden='true'></i>
-                </div>
-              </div>
-              <h3 class="product-title">코펜하겐 1800 거실장 </h3>
-              <div class="price"><span>43%</span>185,000원</div>
-              <div class="rating">
-                <i class='fa fa-star' aria-hidden='true'></i>4.2
-                <span>리뷰 1,832개</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="img-box">
-                <img src="../assets/diy/diy-item-img3.png" alt="스토어 아이템 이미지3">
-                <div class="bookmark">
-                  <i class='fa fa-bookmark' aria-hidden='true'></i>
-                </div>
-              </div>
-              <h3 class="product-title">노르마니 모던 수납장</h3>
-              <div class="price"><span>13%</span>93,500원</div>
-              <div class="rating">
-                <i class='fa fa-star' aria-hidden='true'></i>3.4
-                <span>리뷰 365개</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="img-box">
-                <img src="../assets/diy/diy-item-img4.png" alt="스토어 아이템 이미지4">
-                <div class="bookmark">
-                  <i class='fa fa-bookmark' aria-hidden='true'></i>
-                </div>
-              </div>
-              <h3 class="product-title">인테리어 포인트 에펠체어 3colors</h3>
-              <div class="price"><span>14%</span>19,900원</div>
-              <div class="rating">
-                <i class='fa fa-star' aria-hidden='true'></i>3.6
-                <span>리뷰 1,536개</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="img-box">
-                <img src="../assets/diy/diy-item-img5.png" alt="스토어 아이템 이미지5">
-                <div class="bookmark">
-                  <i class='fa fa-bookmark' aria-hidden='true'></i>
-                </div>
-              </div>
-              <h3 class="product-title">플랫 리빙 거실 테이블 1200 (높은형)</h3>
-              <div class="price"><span>10%</span>45,000원</div>
-              <div class="rating">
-                <i class='fa fa-star' aria-hidden='true'></i>3.1
-                <span>리뷰 127개</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <div class="img-box">
-                <img src="../assets/diy/diy-item-img6.png" alt="스토어 아이템 이미지6">
-                <div class="bookmark">
-                  <i class='fa fa-bookmark' aria-hidden='true'></i>
-                </div>
-              </div>
-              <h3 class="product-title">POL 아쿠아텍스 3인소파</h3>
-              <div class="price"><span>45%</span>295,000원</div>
-              <div class="rating">
-                <i class='fa fa-star' aria-hidden='true'></i>4.2
-                <span>리뷰 365개</span>
-              </div>
-            </a>
           </li>
         </ul>
       </div>
@@ -253,10 +144,9 @@
 
   export default {
     name: 'Diy',
-    data(){
-      return{
+    data() {
+      return {
         diyCategory: [],
-        diyLevel: [],
         diyProducts: []
       }
     },
@@ -267,6 +157,7 @@
       this.swiperSlide();
       this.trendTab();
       this.getDiyCategory();
+      this.getDiyProduct();
     },
     methods: {
       trendTab() {
@@ -304,17 +195,27 @@
 
         });
       },
-      getDiyCategory(){
+      getDiyCategory() {
         db.collection('diy_category').orderBy('diy_category_id').get().then(querySnapshot => {
           const diyCategory = [];
-          
+
           querySnapshot.forEach(doc => {
             console.log(doc.data());
-            
+
             diyCategory.push(doc.data());
           });
-        this.diyCategory = diyCategory;
+          this.diyCategory = diyCategory;
         });
+      },
+      getDiyProduct() {
+        db.collection('diy_product').orderBy('diy_product_id').get().then(querySnapshot => {
+          const diyProducts = []
+
+          querySnapshot.forEach(doc => {
+            diyProducts.push(doc.data());
+          })
+          this.diyProducts = diyProducts;
+        })
       }
     }
   }
@@ -588,6 +489,20 @@
     border-top: 1px solid #e2e2e2;
   }
 
+  #diy #contents .product-list p {
+    width: 100%;
+    margin: 0 0 22px;
+    font: 400 1.2rem/13px '맑은고딕', sans-serif;
+  }
+
+  #diy #contents .product-list p span {
+    margin-left: 45%;
+  }
+
+  #diy #contents .product-list p span i:first-child {
+    margin-right: 28px;
+  }
+
   #diy #contents .product-list h2 {
     color: #464646;
     font: bold 1.8rem/24px '맑은 고딕', sans-serif;
@@ -675,26 +590,12 @@
     margin-left: 7px;
   }
 
-
-  #diy #contents .product-list p {
-    margin: 0 0 22px;
-    font: 400 1.2rem/13px '맑은고딕', sans-serif;
-  }
-
-  #diy #contents .product-list p span {
-    margin-left: 130px;
-  }
-
-  #diy #contents .product-list p span i:first-child {
-    margin-right: 28px;
-  }
-
   /* swiper-container */
   #diy .swiper-container {
     width: 100%;
   }
-    #diy .swiper-container:nth-child(2) {
+
+  #diy .swiper-container:nth-child(2) {
     border-top: 1px solid #e2e2e2;
   }
-
 </style>

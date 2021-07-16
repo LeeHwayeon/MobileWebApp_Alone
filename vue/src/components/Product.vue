@@ -175,16 +175,13 @@
     background-color: #952fa0;
   }
 
-
-  /* *********** Product Area Start *********** */
-
-  /* menubar-top icon */
-  /* *********** menubar-top *********** */
+  /* *********** Header Area Start *********** */
   #header {
     width: 100%;
     margin-bottom: 5px;
   }
 
+  /* menubar-top */
   #header .menubar-top {
     width: 100%;
     height: auto;
@@ -234,7 +231,7 @@
   }
 
 
-  /* contents */
+  /* *********** Contents Area Start *********** */
   #product #contents {
     padding: 25px 23px;
   }
@@ -359,9 +356,10 @@
     color: #7b7979;
   }
 
-  /* .tab-menu */
+  /* tab-menu */
   #product #contents .product-infor .tab-wrap {
     width: 100%;
+    height: 170px;
     margin: 0;
     border-bottom: 1px solid #e2e2e2;
   }
@@ -404,6 +402,18 @@
     display: block;
     width: 100%;
     height: 3px;
+  }
+
+  .on::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    color: #9660a2;
+    background-color: #9660a2;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
   }
 
   /* footer */

@@ -4,6 +4,7 @@ import firebase from 'firebase'
 
 import Intro from '../../src/components/Intro.vue'
 import Login from '../../src/components/Login.vue'
+import Signup from '../../src/components/Signup.vue'
 import Trend from '../../src/components/Trend.vue'
 import Best from '../../src/components/Best.vue'
 import Community from '../../src/components/Community.vue'
@@ -34,7 +35,7 @@ let router = new Router({
    {
     path: '/signup',
     name: 'Signup',
-    component: Login
+    component: Signup
    },
    {
     path: '/trend',
