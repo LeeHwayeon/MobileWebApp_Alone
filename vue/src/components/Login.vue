@@ -31,7 +31,7 @@
         <h3>빠른 로그인</h3>
         <a href="#"><img src="../assets/login/login-naver.png" alt="naver"></a>
         <a href="#"><img src="../assets/login/login-instar.png" alt="inslogin-instar"></a>
-        <a href="#"><img src="../assets/login/login-google.png" alt="goologin-google"></a>
+        <a href="#" v-on:click="googleLogin"><img src="../assets/login/login-google.png" alt="goologin-google"></a>
         <a href="#"><img src="../assets/login/login-kakao.png" alt="klogin-kakao"></a>
       </div>
     </div>
@@ -67,6 +67,36 @@
 
           });
         e.preventDefault();
+      },
+      googleLogin() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth()
+          .signInWithPopup(provider)
+          .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+
+            this.$router.push('/trend');
+
+          }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            
+            this.$router.push('/signup');
+
+          });
+
       }
     }
   }
