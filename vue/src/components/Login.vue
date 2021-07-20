@@ -2,7 +2,7 @@
   <div id="login">
     <!-- top-box Area Start -->
     <div class="top-box">
-      <router-link to="/intro"><i class='fa fa-angle-left' aria-hidden='true'></i></router-link>
+      <router-link to="/"><i class='fa fa-angle-left' aria-hidden='true'></i></router-link>
       <h2>로그인</h2>
     </div>
 
