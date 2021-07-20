@@ -80,6 +80,9 @@
   #header {
     width: 100%;
     margin-bottom: 5px;
+    position: fixed;
+    top: 0; z-index: 10;
+    background-color: #fff;
   }
 
   #header .menubar-top {
@@ -154,6 +157,10 @@
     width: 100%;
     height: 35px;
     margin: 15px 0 0;
+  }
+
+  .tab-menu .tabs{
+    height: 40px;
   }
 
   .tab-menu ul li {

@@ -17,7 +17,7 @@
         <input type="password" name="pw" id="input_pw" placeholder="비밀번호" v-model="password">
       </div>
       <p>
-        <button to="/trend" id="login_btn" class="btn" v-on:click="login">로그인</button>
+        <button id="login_btn" class="btn" v-on:click="login">로그인</button>
       </p>
     </form>
 
@@ -92,8 +92,8 @@
             var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
-            
-            this.$router.push('/signup');
+
+
 
           });
 

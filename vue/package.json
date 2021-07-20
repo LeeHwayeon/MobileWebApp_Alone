@@ -1,8 +1,8 @@
 {
-  "name": "mobile-project",
+  "name": "vue",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "",
+  "author": "Leehwayeon <snw4002@hanmail.net>",
   "license": "MIT",
   "private": true,
   "scripts": {

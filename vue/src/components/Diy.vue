@@ -42,67 +42,100 @@
     <!-- Contents Area Start -->
     <div id="contents">
 
-      <div class="swiper-container">
-        <!-- diy category -->
-        <div class="category swiper-wrapper">
-          <div class="category-item" v-for="category in diyCategory" v-bind:key="category.diy_category_id">
+
+      <div id="slider1">
+        <div class="swiper-container">
+          <!-- diy category -->
+          <div class="category swiper-wrapper">
             <a href="#" class="swiper-slide">
               <div class="img-box">
-                <img v-bind:src="category.diy_category_img">
+                <img src="../assets/diy/diy-menu-icon1.png" alt="DIY 메뉴 카테고리1">
               </div>
-              <p>{{ category.diy_category_name }}</p>
+              <p>소파/거실</p>
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="img-box">
+                <img src="../assets/diy/diy-menu-icon2.png" alt="DIY 메뉴 카테고리2">
+              </div>
+              <p>침실가구</p>
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="img-box">
+                <img src="../assets/diy/diy-menu-icon3.png" alt="DIY 메뉴 카테고리3">
+              </div>
+              <p>수납/정리</p>
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="img-box">
+                <img src="../assets/diy/diy-menu-icon4.png" alt="DIY 메뉴 카테고리4">
+              </div>
+              <p>식탁/테이블</p>
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="img-box">
+                <img src="../assets/diy/diy-menu-icon5.png" alt="DIY 메뉴 카테고리5">
+              </div>
+              <p>홈데코조명</p>
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="img-box">
+                <img src="../assets/diy/diy-menu-icon6.png" alt="DIY 메뉴 카테고리6">
+              </div>
+              <p>반려동물</p>
             </a>
           </div>
         </div>
       </div>
 
+
       <!-- diy level -->
-      <div class="swiper-container">
+      <div id="slider2">
         <!-- diy-level-title -->
         <h2>조립 난이도별 추천!</h2>
-
-        <!-- diy-level-content -->
-        <div class="diy-level swiper-wrapper">
-          <a href="#" class="swiper-slide">
-            <div class="icon">
-              <i class='fa fa-star' aria-hidden='true'></i>
-            </div>
-            <img src="../assets/diy/diy-level-img1.png" alt="DIY 난이도 이미지1">
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="icon">
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-            </div>
-            <img src="../assets/diy/diy-level-img2.png" alt="DIY 난이도 이미지2">
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="icon">
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-            </div>
-            <img src="../assets/diy/diy-level-img3.png" alt="DIY 난이도 이미지3">
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="icon">
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-            </div>
-            <img src="../assets/diy/diy-level-img4.png" alt="DIY 난이도 이미지4">
-          </a>
-          <a href="#" class="swiper-slide">
-            <div class="icon">
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-              <i class='fa fa-star' aria-hidden='true'></i>
-            </div>
-            <img src="../assets/diy/diy-level-img5.png" alt="DIY 난이도 이미지5">
-          </a>
+        <div class="swiper-container">
+          <!-- diy-level-content -->
+          <div class="diy-level swiper-wrapper">
+            <a href="#" class="swiper-slide">
+              <div class="icon">
+                <i class='fa fa-star' aria-hidden='true'></i>
+              </div>
+              <img src="../assets/diy/diy-level-img1.png" alt="DIY 난이도 이미지1">
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="icon">
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+              </div>
+              <img src="../assets/diy/diy-level-img2.png" alt="DIY 난이도 이미지2">
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="icon">
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+              </div>
+              <img src="../assets/diy/diy-level-img3.png" alt="DIY 난이도 이미지3">
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="icon">
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+              </div>
+              <img src="../assets/diy/diy-level-img4.png" alt="DIY 난이도 이미지4">
+            </a>
+            <a href="#" class="swiper-slide">
+              <div class="icon">
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+                <i class='fa fa-star' aria-hidden='true'></i>
+              </div>
+              <img src="../assets/diy/diy-level-img5.png" alt="DIY 난이도 이미지5">
+            </a>
+          </div>
         </div>
       </div>
 
@@ -150,7 +183,6 @@
     name: 'Diy',
     data() {
       return {
-        diyCategory: [],
         diyProducts: []
       }
     },
@@ -158,9 +190,9 @@
       Footer
     },
     mounted() {
-      this.swiperSlide();
-      this.trendTab();
-      this.getDiyCategory();
+      this.storeTab();
+      this.swiperSlide1();
+      this.swiperSlide2();
       this.getDiyProduct();
     },
     methods: {
@@ -184,12 +216,12 @@
         $('#header .tab-menu ul li a').removeClass('on');
         $('#header .tab-menu ul li a').eq(3).addClass('on');
       },
-      swiperSlide() {
-        var swiper = new Swiper('.swiper-container', {
+      swiperSlide1() {
+        var swiper = new Swiper('#slider1 .swiper-container', {
           // Optional parameters
           // Default parameters
           slidesPerView: 4,
-          spaceBetween: 20,
+          spaceBetween: 8,
           freeMode: true,
 
           // Optional parameters
@@ -199,16 +231,19 @@
 
         });
       },
-      getDiyCategory() {
-        db.collection('diy_category').orderBy('diy_category_id').get().then(querySnapshot => {
-          const diyCategory = [];
+      swiperSlide2() {
+        var swiper = new Swiper('#slider2 .swiper-container', {
+          // Optional parameters
+          // Default parameters
+          slidesPerView: 4,
+          spaceBetween: 10,
+          freeMode: true,
 
-          querySnapshot.forEach(doc => {
-            // console.log(doc.data());
+          // Optional parameters
+          direction: 'horizontal',
+          loop: false,
+          autoplay: false
 
-            diyCategory.push(doc.data());
-          });
-          this.diyCategory = diyCategory;
         });
       },
       getDiyProduct() {
@@ -216,6 +251,7 @@
           const diyProducts = []
 
           querySnapshot.forEach(doc => {
+            // console.log(doc.data());
             diyProducts.push(doc.data());
           })
           this.diyProducts = diyProducts;
@@ -227,9 +263,15 @@
 
 <style scoped>
   /* ******************* Header Area Start ******************* */
+  #diy{
+    padding-top: 129px;
+  }
   #diy #header {
     width: 100%;
     margin-bottom: 5px;
+    background-color: #fff;
+    z-index: 10;
+    position: fixed; top: 0;
   }
 
   /*  menubar-top  */
@@ -348,6 +390,10 @@
     margin: 15px 0 0;
   }
 
+  #diy .tab-menu .tabs {
+    height: 40px;
+  }
+
   #diy .tab-menu ul li {
     width: 25%;
     height: 100%;
@@ -401,17 +447,22 @@
   }
 
   /* category */
-  #diy #contents .category .category-item>a {
+  #diy #contents .category{
+    width: 100%;
+  }
+  #diy #contents .category>a {
+    width: 71px;
+    height: 97px;
+    text-align: center;
     display: inline-block;
     margin-right: 24px;
-    height: 97px;
     padding: 0 2%;
     margin-bottom: 20px;
   }
 
-  #diy #contents .category .category-item>a .img-box {
-    width: 64px;
-    height: 64px;
+  #diy #contents .category>a .img-box {
+    width: 70px;
+    height: 70px;
     position: relative;
     margin: 0 auto;
     background-color: #ecebeb;
@@ -419,11 +470,11 @@
 
   }
 
-  #diy #contents .category .category-item>a .img-box:hover {
+  #diy #contents .category>a .img-box:hover {
     background-color: rgb(228, 228, 228);
   }
 
-  #diy #contents .category .category-item>a>div>img {
+  #diy #contents .category>a>div>img {
     width: 45px;
     height: 45px;
     position: absolute;
@@ -436,7 +487,8 @@
     transform: translate(-50%, -50%);
   }
 
-  #diy #contents .category .category-item>a p {
+  #diy #contents .category>a p {
+    width: 71px;
     color: #464646;
     font: bold 1.3rem/18px '맑은 고딕', sans-serif;
     text-align: center;
@@ -445,6 +497,10 @@
 
 
   /* diy-level */
+  #diy #contents #slider2 {
+    border-top: 1px solid #e2e2e2;
+  }
+
   #diy #contents .diy-level {
     margin-bottom: 29px;
   }
@@ -500,7 +556,7 @@
   }
 
   #diy #contents .product-list p span {
-    margin-left: 45%;
+    margin-left: 40%;
   }
 
   #diy #contents .product-list p span i:first-child {
@@ -599,7 +655,4 @@
     width: 100%;
   }
 
-  #diy .swiper-container:nth-child(2) {
-    border-top: 1px solid #e2e2e2;
-  }
 </style>

@@ -9,16 +9,89 @@
 
       <!-- category -->
       <div class="category">
-        <div class="category-item" v-for="category in storeCategory" v-bind:key="category.store_category_id">
-          <!-- diy에만 링크를 거는 방법? -->
-          <router-link to="/diy">
-            <div class="img-box">
-              <img v-bind:src="category.store_category_img">
-            </div>
-            <p>{{category.store_category_name}}</p>
-          </router-link>
-        </div>
+        <router-link to="/diy">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon1.png" alt="스토어 카테고리 아이콘1">
+          </div>
+          <p>DIY</p>
+        </router-link>
+        <a href="#">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon2.png" alt="스토어 카테고리 아이콘2">
+          </div>
+          <p>소파/거실</p>
+        </a>
+        <a href="#">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon3.png" alt="스토어 카테고리 아이콘3">
+          </div>
+          <p>침구</p>
+        </a>
+        <a href="#">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon4.png" alt="스토어 카테고리 아이콘4">
+          </div>
+          <p>침실가구</p>
+        </a>
+        <a href="#">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon5.png" alt="스토어 카테고리 아이콘5">
+          </div>
+          <p>주방</p>
+        </a>
+        <a href="#">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon6.png" alt="스토어 카테고리 아이콘6">
+          </div>
+          <p>가전</p>
+        </a>
+        <a href="#">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon7.png" alt="스토어 카테고리 아이콘7">
+          </div>
+          <p>수납/정리</p>
+        </a>
+        <a href="#" v-on:click="popUp">
+          <i class='fa fa-plus' aria-hidden='true'></i>
+        </a>
+        <a href="#" class="act">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon8.png" alt="스토어 카테고리 아이콘8">
+          </div>
+          <p>러그/카페트</p>
+        </a>
+        <a href="#" class="act">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon9.png" alt="스토어 카테고리 아이콘9">
+          </div>
+          <p>반려동물</p>
+        </a>
+        <a href="#" class="act">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon10.png" alt="스토어 카테고리 아이콘10">
+          </div>
+          <p>홈데코조명</p>
+        </a>
+        <a href="#" class="act">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon11.png" alt="스토어 카테고리 아이콘11">
+          </div>
+          <p>식탁/테이블</p>
+        </a>
+        <a href="#" class="act">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon12.png" alt="스토어 카테고리 아이콘12">
+          </div>
+          <p>생활용품</p>
+        </a>
+        <a href="#" class="act">
+          <div class="img-box">
+            <img src="../assets/store/store-menu-icon13.png" alt="스토어 카테고리 아이콘13">
+          </div>
+          <p>커튼/블라인드</p>
+        </a>
       </div>
+
 
       <!-- product-list -->
       <div class="product-list">
@@ -66,26 +139,19 @@
     },
     data() {
       return {
-        storeCategory: [],
         storeProducts: []
       }
     },
     mounted() {
+      this.storeTab();
       this.popUp();
-      this.getStoreCategory();
       this.getStroeProduct();
     },
     methods: {
-      getStoreCategory() {
-        db.collection("store_category").orderBy('store_category_id').get().then((snapshot) => {
-          const storeCategory = []
-          snapshot.forEach((doc) => {
-            // console.log(doc.data());
-
-            storeCategory.push(doc.data());
-          });
-          this.storeCategory = storeCategory;
-        });
+      storeTab() {
+        $('#footer a').removeClass('on2');
+        $('#header .tab-menu ul li a').removeClass('on');
+        $('#header .tab-menu ul li a').eq(3).addClass('on');
       },
       getStroeProduct() {
         db.collection("store_product").orderBy("store_product_id").get().then((querySnapshot) => {
@@ -99,10 +165,12 @@
       },
       popUp() {
         //store category btn
-        $('#store #contents .category>a:nth-child(8)').click(function () {
-          $(this).css('display', 'none');
-          $('#store #contents .category>a:nth-child(n+9)').removeClass('act').css('display', 'block');
-        });
+        $('#store #contents .category>a:nth-child(8)').click(
+          function (e) {
+            $(this).css('display', 'none');
+            $('#store #contents .category>a:nth-child(n+9)').removeClass('act').css('display', 'block');
+            e.preventDefault();
+          });
       }
     }
   }
@@ -110,6 +178,9 @@
 
 <style scoped>
   /* *********** Header Area Start *********** */
+  #store{
+    padding-top: 129px;
+  }
   #store #header {
     width: 100%;
     margin-bottom: 5px;
@@ -199,17 +270,15 @@
     margin-bottom: 9px;
   }
 
-  #store #contents .category .category-item {
+  #store #contents .category>a {
+    display: block;
     width: 25%;
-  }
-
-  #store #contents .category .category-item>a {
     height: 97px;
     padding: 0 2%;
     margin-bottom: 20px;
   }
 
-  #store #contents .category .category-item>a .img-box {
+  #store #contents .category>a .img-box {
     width: 68px;
     height: 68px;
     background-color: #ecebeb;
@@ -218,11 +287,11 @@
     border-radius: 10px;
   }
 
-  #store #contents .category .category-item>a .img-box:hover {
+  #store #contents .category>a .img-box:hover {
     background-color: rgb(228, 228, 228);
   }
 
-  #store #contents .category .category-item>a>div>img {
+  #store #contents .category>a>div>img {
     width: 56px;
     height: 56px;
     position: absolute;
@@ -235,14 +304,14 @@
     transform: translate(-50%, -50%);
   }
 
-  #store #contents .category .category-item>a p {
+  #store #contents .category>a p {
     color: #464646;
     font: bold 1.3rem/18px '맑은 고딕', sans-serif;
     text-align: center;
     margin-top: 11px;
   }
 
-  #store #contents .category .category-item>a:nth-child(8) {
+  #store #contents .category>a:nth-child(8) {
     text-align: center;
     line-height: 97px;
     font-size: 2.5rem;
@@ -276,7 +345,7 @@
     margin: 0 23px 23px 0;
     color: #2d2d2d;
   }
-
+  
   #store #contents .product-list ul li:nth-child(2n) {
     margin-right: 0;
   }

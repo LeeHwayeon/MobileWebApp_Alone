@@ -1,4 +1,4 @@
-# mobile-project
+# vue
 
 > A Vue.js project
 

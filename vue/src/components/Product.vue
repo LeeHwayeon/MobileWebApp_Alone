@@ -146,11 +146,12 @@
         //초기값 설정
         $('.tab-wrap>ul>li:first-child>a').addClass('on').next().css('display', 'block');
 
-        tabMenu.click(function () {
+        tabMenu.click(function (e) {
           tabMenu.removeClass('on');
           tabContent.css('display', 'none');
 
           $(this).addClass('on').next().css('display', 'block');
+          e.preventDefault();
         });
 
       }
@@ -187,6 +188,11 @@
     height: auto;
     padding: 40px 23px 0;
     text-align: center;
+    border-bottom: 1px solid #e2e2e2;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
   }
 
   #header .menubar-top::after {
@@ -232,7 +238,7 @@
 
   /* *********** Contents Area Start *********** */
   #product #contents {
-    padding: 25px 23px;
+    padding: 125px 23px 25px 23px;
   }
 
   /* product-category */

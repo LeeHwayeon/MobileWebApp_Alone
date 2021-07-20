@@ -20,75 +20,142 @@ import Mypage from '../../src/components/Mypage.vue'
 Vue.use(Router)
 
 let router = new Router({
-  mode: 'history',
+  //mode: 'history',
   routes: [
    {
       path: '/',
       name: 'Intro',
-      component: Intro
+      component: Intro,
+      meta: {
+        requiresGuest: true
+      }
    },
    {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+        requiresGuest: true
+      }
    },
    {
     path: '/signup',
     name: 'Signup',
-    component: Signup
+    component: Signup,
+    meta: {
+      requiresGuest: true
+    }
    },
    {
     path: '/trend',
     name: 'Trend',
-    component: Trend
+    component: Trend,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/best',
     name: 'Best',
-    component: Best
+    component: Best,
+   meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/community',
     name: 'Community',
-    component: Community
+    component: Community,
+    meta: {
+      requiresAuth: true
+    }
+    
    },
    {
     path: '/interior',
     name: 'Interior',
-    component: Interior
+    component: Interior,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/store',
     name: 'Store',
-    component: Store
+    component: Store,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/diy',
     name: 'Diy',
-    component: Diy
+    component: Diy,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/product',
     name: 'Product',
-    component: Product
+    component: Product,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/eco',
     name: 'Eco',
-    component: Eco
+    component: Eco,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/refur',
     name: 'Refur',
-    component: Refur
+    component: Refur,
+    meta: {
+      requiresAuth: true
+    }
    },
    {
     path: '/mypage',
     name: 'Mypage',
-    component: Mypage
-   },
+    component: Mypage,
+    meta: {
+        requiresAuth: true
+      }
+   }
  ]
 });
 
+// Nav Guards
+router.beforeEach((to, from, next) => {
+
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // 이 라우트는 인증이 필요하며 로그인 한 경우 확인하십시오.
+    // 그렇지 않은 경우 로그인 페이지로 리디렉션하십시오.
+    if (!firebase.auth().currentUser) {
+      next({
+        path: '/',
+        query: { redirect: to.fullPath }
+      })
+    } else {
+      next()
+    }
+  } else if(to.matched.some(record => record.meta.requiresGuest)){
+    if(firebase.auth().currentUser) {
+      next({
+        path: '/trend',
+        query: { redirect: to.fullPath }
+      })
+    } else {
+      next()
+    }
+  }else{
+    next()
+  }
+})
 
 export default router;
