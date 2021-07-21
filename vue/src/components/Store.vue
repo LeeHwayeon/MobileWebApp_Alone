@@ -178,9 +178,10 @@
 
 <style scoped>
   /* *********** Header Area Start *********** */
-  #store{
+  #store {
     padding-top: 129px;
   }
+
   #store #header {
     width: 100%;
     margin-bottom: 5px;
@@ -278,6 +279,10 @@
     margin-bottom: 20px;
   }
 
+  /* #store #contents .category>a:first-child .img-box {
+    border: 3px solid #7b7979;
+  } */
+
   #store #contents .category>a .img-box {
     width: 68px;
     height: 68px;
@@ -345,7 +350,7 @@
     margin: 0 23px 23px 0;
     color: #2d2d2d;
   }
-  
+
   #store #contents .product-list ul li:nth-child(2n) {
     margin-right: 0;
   }

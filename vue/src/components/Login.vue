@@ -9,8 +9,8 @@
     <!-- form Area Start -->
     <form action="">
       <div class="form-group">
-        <label for="input_id">아이디</label>
-        <input type="text" name="id" id="input_id" placeholder="아이디" v-model="id">
+        <label for="input_id">이메일</label>
+        <input type="text" name="id" id="input_id" placeholder="이메일" v-model="id">
       </div>
       <div class="form-group">
         <label for="input_pw">비밀번호</label>

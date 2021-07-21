@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import firebase from 'firebase'
+import db from './db'
 
 // new Vue({
 //   el: '#app',
@@ -20,7 +21,9 @@ firebase.auth().onAuthStateChanged(user => {
     new Vue({
       el: '#app',
       router,
+      db,
       render: h => h(App)
     });
   }
+  
 });

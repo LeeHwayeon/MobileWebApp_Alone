@@ -263,15 +263,17 @@
 
 <style scoped>
   /* ******************* Header Area Start ******************* */
-  #diy{
+  #diy {
     padding-top: 129px;
   }
+
   #diy #header {
     width: 100%;
     margin-bottom: 5px;
     background-color: #fff;
     z-index: 10;
-    position: fixed; top: 0;
+    position: fixed;
+    top: 0;
   }
 
   /*  menubar-top  */
@@ -447,9 +449,10 @@
   }
 
   /* category */
-  #diy #contents .category{
+  #diy #contents .category {
     width: 100%;
   }
+
   #diy #contents .category>a {
     width: 71px;
     height: 97px;
@@ -582,6 +585,11 @@
     color: #2d2d2d;
   }
 
+  /* #diy #contents .product-list ul li:first-child img {
+    border: 3px solid #7b7979;
+    border-radius: 12px;
+  } */
+
   #diy #contents .product-list ul li:nth-child(2n) {
     margin-right: 0;
   }
@@ -654,5 +662,4 @@
   #diy .swiper-container {
     width: 100%;
   }
-
 </style>
