@@ -2,19 +2,19 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import firebase from 'firebase'
 
-import Intro from '../../src/components/Intro.vue'
-import Login from '../../src/components/Login.vue'
-import Signup from '../../src/components/Signup.vue'
-import Trend from '../../src/components/Trend.vue'
-import Best from '../../src/components/Best.vue'
-import Community from '../../src/components/Community.vue'
-import Interior from '../../src/components/Interior.vue'
-import Store from '../../src/components/Store.vue'
-import Diy from '../../src/components/Diy.vue'
-import Product from '../../src/components/Product.vue'
-import Eco from '../../src/components/Eco.vue'
-import Refur from '../../src/components/Refur.vue'
-import Mypage from '../../src/components/Mypage.vue'
+import Intro from '../components/Intro.vue'
+import Login from '../components/Login.vue'
+import Signup from '../components/Signup.vue'
+import Trend from '../components/Trend.vue'
+import Best from '../components/Best.vue'
+import Community from '../components/Community.vue'
+import Interior from '../components/Interior.vue'
+import Store from '../components/Store.vue'
+import Diy from '../components/Diy.vue'
+import Product from '../components/Product.vue'
+import Eco from '../components/Eco.vue'
+import Refur from '../components/Refur.vue'
+import Mypage from '../components/Mypage.vue'
 
 
 Vue.use(Router)
@@ -24,11 +24,19 @@ let router = new Router({
   routes: [
    {
       path: '/',
-      name: 'Intro',
-      component: Intro,
+      name: 'Trend',
+      component: Trend,
       meta: {
-        requiresGuest: true
+        requiresAuth: true
       }
+   },
+   {
+    path: '/intro',
+    name: 'Intro',
+    component: Intro,
+    meta: {
+      requiresGuest: true
+    }
    },
    {
     path: '/login',
@@ -44,14 +52,6 @@ let router = new Router({
     component: Signup,
     meta: {
       requiresGuest: true
-    }
-   },
-   {
-    path: '/trend',
-    name: 'Trend',
-    component: Trend,
-    meta: {
-      requiresAuth: true
     }
    },
    {
@@ -138,7 +138,7 @@ router.beforeEach((to, from, next) => {
     // 그렇지 않은 경우 로그인 페이지로 리디렉션하십시오.
     if (!firebase.auth().currentUser) {
       next({
-        path: '/',
+        path: '/intro',
         query: { redirect: to.fullPath }
       })
     } else {
@@ -147,7 +147,7 @@ router.beforeEach((to, from, next) => {
   } else if(to.matched.some(record => record.meta.requiresGuest)){
     if(firebase.auth().currentUser) {
       next({
-        path: '/trend',
+        path: '/',
         query: { redirect: to.fullPath }
       })
     } else {

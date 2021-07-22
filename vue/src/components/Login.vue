@@ -8,8 +8,8 @@
     <!-- form Area Start -->
     <form action="">
       <div class="form-group">
-        <label for="input_id">아이디</label>
-        <input type="text" name="id" id="input_id" placeholder="아이디" v-model="id">
+        <label for="input_id">이메일</label>
+        <input type="text" name="id" id="input_id" placeholder="이메일" v-model="id">
       </div>
       <div class="form-group">
         <label for="input_pw">비밀번호</label>
@@ -56,15 +56,13 @@
             console.log(user);
             alert('환영합니다 ☺️');
 
-            this.$router.push('/trend');
+            this.$router.push('/');
 
-          }, err => {
-            console.log(err.message);
-            alert("나홀로집에 회원이 아닙니다. 회원가입부터 진행해주세요!");
+          }, 
+        err => {
+          console.log(err.message);
+        });
 
-            this.$router.push('/signup');
-
-          });
         e.preventDefault();
       },
       googleLogin() {
@@ -168,7 +166,7 @@
     border-bottom: 1px solid #b1b1b1;
     padding: 9px 0;
     font: 400 1.3rem/17px '맑은 고딕', sans-serif;
-    color: #7b7979;
+    color: #fff;
   }
 
   #login form p {
@@ -191,18 +189,23 @@
     margin-right: 46px;
   }
 
-  #login .bottom-box a:nth-child(1) {
+  #login .bottom-box> a:nth-child(1) {
     padding-right: 46px;
-    border-right: 1px solid #b1b1b1;
+    padding:5px;
+    /* border-right: 1px solid #b1b1b1; */
   }
 
-  #login .bottom-box a:nth-child(2) {
+  #login .bottom-box> a:nth-child(2) {
     margin-right: 0;
+    color:#fff;
+    font-weight:700;
+    /* background-color: #460e4d; */
+    padding:5px;
   }
 
-  #login .bottom-box a:hover {
-    color: #666;
-  }
+  /* #login .bottom-box>a:nth-child(1):hover {
+   background-color: #460e4d;
+  } */
 
   /* fast-login */
   #login .bottom-box .fast-login {

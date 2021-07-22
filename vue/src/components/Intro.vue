@@ -14,24 +14,25 @@
       this.loginMove();
     },
     methods: {
-      loginMove() {
+      loginMove(){
         setTimeout(() => {
           this.$router.push('/login')
-        }, 5000);
+        }, 2000);
       }
     }
   }
 </script>
 
 <style scoped>
+
   /* background img */
-  #intro {
+  #intro{
     height: 900px;
     background-image: url(https://mobile-project-img.netlify.app/intro-bg.png);
     background-size: cover;
   }
 
-  #intro::after {
+  #intro::after{
     content: '';
     display: block;
     width: 100%;

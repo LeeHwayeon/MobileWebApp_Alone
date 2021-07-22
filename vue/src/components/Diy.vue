@@ -22,7 +22,7 @@
       <div class="tab-menu">
         <ul class="tabs">
           <li v-on:click="trendTab">
-            <router-link to="/trend">트렌드</router-link>
+            <router-link to="/">트렌드</router-link>
           </li>
           <li v-on:click="bestTab">
             <router-link to="/best">베스트</router-link>
