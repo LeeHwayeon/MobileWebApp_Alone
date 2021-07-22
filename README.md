@@ -33,9 +33,9 @@
 |<center></center> |<center>커뮤니티(갤러리+참견)</center> |  <center>갤러리 페이지 로드시 자동으로 태그 펼치기</center> | <center>O</center> |<center>윤화</center> | 
 |<center></center> |<center>스토어</center> |   <center>DB에서 스토어 상품 리스트 불러오기</center> | <center>O</center> |<center>화연</center> |
 |<center></center> |<center>DIY</center> |   <center>DB에서 DIY 상품 리스트 불러오기</center> | <center>O</center> |<center>화연</center> |
-|<center></center> |<center>DIY</center> |   <center>DIY 카테고리, 난이도 swiper</center> | <center>O</center> |<center>화연</center> |
+|<center></center> |<center></center> |   <center>DIY 카테고리, 난이도 swiper</center> | <center>O</center> |<center>화연</center> |
 |<center></center> |<center>DIY 상품 상세페이지</center> |   <center>상품 이미지 swiper</center> | <center>O</center> |<cente>화연</center> |
-|<center></center> |<center>DIY 상품 상세페이지</center> |   <center>상품정보 탭</center> | <center>O</center> |<cente>화연</center> |
+|<center></center> |<center></center> |   <center>상품 상세 정보 탭 구성</center> | <center>O</center> |<cente>화연</center> |
 |**<center>하단 Tab</center>** |<center>에코마켓(중고+리퍼)</center> |   <center>중고/리퍼 view 구성</center> | <center>O</center> |<center>윤진</center> |
 |<center></center> |<center>마이페이지</center> |   <center>현재 사용자 정보 불러오기</center> | <center>O</center> |<center>윤화</center> | 
-|<center></center> |<center>마이페이지</center> |   <center>후기/히스토리/스크랩 탭 구성</center> | <center>O</center> |<center>윤화</center> | 
+|<center></center> |<center></center> |   <center>후기/히스토리/스크랩 탭 구성</center> | <center>O</center> |<center>윤화</center> | 
