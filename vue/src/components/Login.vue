@@ -2,15 +2,14 @@
   <div id="login">
     <!-- top-box Area Start -->
     <div class="top-box">
-      <router-link to="/"><i class='fa fa-angle-left' aria-hidden='true'></i></router-link>
       <h2>로그인</h2>
     </div>
 
     <!-- form Area Start -->
     <form action="">
       <div class="form-group">
-        <label for="input_id">이메일</label>
-        <input type="text" name="id" id="input_id" placeholder="이메일" v-model="id">
+        <label for="input_id">아이디</label>
+        <input type="text" name="id" id="input_id" placeholder="아이디" v-model="id">
       </div>
       <div class="form-group">
         <label for="input_pw">비밀번호</label>
@@ -92,8 +91,8 @@
             var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
-
-
+            
+            
 
           });
 
@@ -103,6 +102,7 @@
 </script>
 
 <style scoped>
+
   /* ******************* 공통영역 선언시작 **************** */
 
   /* *********** btn *********** */
@@ -124,7 +124,10 @@
 
   /* *********** Login Area Start *********** */
   #login {
+    height: 900px;
     padding: 57px 33px;
+    background-image: url(https://mobile-project-img.netlify.app/intro-bg.png);
+    background-size: cover;
   }
 
   /* top-box */
@@ -135,13 +138,11 @@
     color: #2d2d2d;
   }
 
-  #login .top-box i {
-    font-size: 3rem;
-    margin-bottom: 63px;
-  }
-
   #login .top-box h2 {
     font: bold 2rem/27px '맑은 고딕', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    color: #fff;
   }
 
   /* form */
@@ -185,7 +186,7 @@
 
   #login .bottom-box a {
     font: 400 1.2rem/16px '맑은 고딕', sans-serif;
-    color: #b1b1b1;
+    color: #fff;
     /* display: inline-lock; */
     margin-right: 46px;
   }
@@ -212,7 +213,7 @@
 
   #login .bottom-box .fast-login h3 {
     font: bold 1.3rem/17px '맑은 고딕', sans-serif;
-    color: #2d2d2d;
+    color: #fff;
     margin-bottom: 12px;
   }
 

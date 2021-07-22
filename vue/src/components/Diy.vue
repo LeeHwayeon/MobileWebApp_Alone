@@ -585,10 +585,10 @@
     color: #2d2d2d;
   }
 
-  /* #diy #contents .product-list ul li:first-child img {
+  #diy #contents .product-list ul li:first-child img {
     border: 3px solid #7b7979;
     border-radius: 12px;
-  } */
+  }
 
   #diy #contents .product-list ul li:nth-child(2n) {
     margin-right: 0;

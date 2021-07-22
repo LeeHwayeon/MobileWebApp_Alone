@@ -9,8 +9,8 @@
 
       <!-- category -->
       <div class="category">
-        <router-link to="/diy">
-          <div class="img-box">
+        <router-link to="/diy" >
+          <div class="img-box" >
             <img src="../assets/store/store-menu-icon1.png" alt="스토어 카테고리 아이콘1">
           </div>
           <p>DIY</p>
@@ -139,7 +139,7 @@
     },
     data() {
       return {
-        storeProducts: []
+        storeProducts: [],
       }
     },
     mounted() {
@@ -176,7 +176,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   /* *********** Header Area Start *********** */
   #store {
     padding-top: 129px;
@@ -279,9 +279,9 @@
     margin-bottom: 20px;
   }
 
-  /* #store #contents .category>a:first-child .img-box {
-    border: 3px solid #7b7979;
-  } */
+  #store #contents .category>a:first-child .img-box{
+    border: 3px solid #7b7979 !important;
+  }
 
   #store #contents .category>a .img-box {
     width: 68px;

@@ -9,9 +9,8 @@
 
       <!-- Back to Gallery Arrow-Btn -->
       <div class="back">
-        <router-link to="/community">
-          <i class='fa  fa-angle-left' aria-hidden='true'></i>갤러리
-        </router-link>
+        <router-link to="/community"><i class='fa  fa-angle-left' aria-hidden='true'></i></router-link>
+        <a href="#">갤러리</a>
       </div>
 
       <!-- Interior-title Area Start -->
@@ -510,9 +509,14 @@
     top: 0;
   }
 
+  #interior .back a:nth-child(2){
+    position: absolute;
+    left: 30px;
+    top: -7px;
+  }
+
   #interior .back a i {
-    font-size: xxx-large;
-    vertical-align: -9px;
+    font-size: 4rem;
     margin-right: 15px;
   }
 
